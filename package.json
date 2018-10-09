@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://ajcastiglione.github.io/password-generator",
   "scripts": {
     "deploy": "gh-pages -d build"
   },
