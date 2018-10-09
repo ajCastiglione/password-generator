@@ -1,0 +1,403 @@
+/*************************
+Global section
+*************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2E507F;
+}
+
+.content-container {
+  width: 1500px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/*************************
+Header section
+*************************/
+
+#header {
+  padding: 5% 0;
+  background-color: #2E507F;
+  font-family: 'Lobster', cursive;
+}
+
+#header h1 {
+  margin: 0;
+  color: #fff;
+}
+
+/*************************
+main content
+*************************/
+
+.all-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-contnet {
+  width: 80%;
+  display: inline-block;
+}
+
+/*************************
+Input section
+*************************/
+
+.input-container {
+  background-color: #A9CDFF;
+  padding: 3% 2%;
+}
+
+.input-title {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+  color: #55667F;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 0.5px 0.5px 1px #000;
+}
+
+.input-title:after {
+  position: absolute;
+  content: '';
+  background-color: #6b7f9c;
+  height: 3px;
+  width: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.top-checkboxes {
+  width: 49%;
+  display: inline-block;
+}
+
+.bottom-checkboxes {
+  width: 49%;
+  display: inline-block;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container .label {
+  margin: 10px 0;
+  display: inline-block;
+  font-style: italic;
+  font-size: 130%;
+  color: black;
+  text-shadow: 1px 1px 5px white;
+  letter-spacing: 0.8px;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+.checkBoxStyle {
+  width: 120px;
+  height: 40px;
+  background: #333;
+  margin: 10px 0;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+}
+
+.checkBoxStyle:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: 14px;
+  height: 2px;
+  width: 90px;
+  background: #111;
+}
+
+.checkBoxStyle label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  left: 12px;
+  background: #ddd;
+}
+
+.checkBoxStyle input[type=checkbox]:checked+label {
+  left: 84px;
+  background: #26ca28;
+}
+
+.number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-container label {
+  padding-right: 1em;
+  display: inline-block;
+  font-style: italic;
+  font-size: 1.45em;
+  color: black;
+  text-shadow: 1px 1px 5px white;
+  letter-spacing: 0.8px;
+}
+
+input[type=number] {
+  width: 300px;
+  max-width: 300px;
+  padding: 12px;
+  text-align: center;
+  color: #000;
+  background-color: rgba(135, 206, 235, 0.5);
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+/************************
+Random word - Section
+*************************/
+
+.randomWord-pw {
+  display: none;
+}
+
+.switchType-section {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 2em;
+}
+
+.switchType-section a {
+  display: inline-block;
+  color: #fff;
+  background-color: #87CEEB;
+  padding: 0.5em 1em;
+  border: 2px solid #87CEEB;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.switchType-section a:hover {
+  background-color: transparent;
+  color: #87CEEB;
+  text-decoration: none;
+}
+
+#concatenateBtn {
+  display: none;
+}
+
+#genRndWord {
+  display: none;
+}
+
+#rndWordsOutput {
+  display: none;
+  width: 60%;
+  min-height: 300px;
+  margin: auto;
+  padding: 1em;
+  border: 2px solid #87CEEB;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.45);
+}
+
+/*************************
+Submit and output Section
+*************************/
+
+.inner-output-section {
+  background-color: rgba(103, 168, 255, 0.7);
+  padding: 3% 2%;
+  text-align: center;
+}
+
+.generate-pw {
+  margin: 1% 0;
+}
+
+.generate-pw h3 {
+  margin: 0;
+  padding-bottom: 1%;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.generate-pw button {
+  margin-top: 10px;
+  outline: none;
+  border: 2px solid #87CEEB;
+  border-radius: 10px;
+  background-color: #87CEEB;
+  color: #000;
+  max-width: 350px;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.generate-pw button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.reset-container #resetChecks {
+  margin: 10px auto;
+  outline: none;
+  border: 2px solid #87CEEB;
+  border-radius: 10px;
+  background-color: #87CEEB;
+  color: #000;
+  max-width: 350px;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset-container #resetChecks:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/****************
+Sidebar section
+****************/
+
+.sidebar {
+  display: inline-block;
+  width: 19%;
+  padding-right: 1%;
+}
+
+#passSpot {
+  background-color: #87CEEB;
+  opacity: 0.9;
+  color: #000;
+  border-radius: 25px;
+  text-align: center;
+  padding: 15px;
+  max-width: 500px;
+  font-size: 110%;
+  border: 1px solid #595c63;
+  letter-spacing: 1.4px;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+/* Previous passwords section */
+
+.password-container {
+  word-wrap: break-word;
+  text-align: center;
+}
+
+#prevPasswords {
+  margin: auto;
+  height: auto;
+  color: #fff;
+  border: 2px inset skyblue;
+  overflow: auto;
+  max-height: 400px;
+  max-width: 300px;
+}
+
+#prevPasswords #title {
+  background-color: #87CEEB;
+  color: #000;
+  text-align: center;
+  font-family: Impact;
+  padding: 5px;
+  font-size: 1.2em;
+  letter-spacing: 0.4px;
+}
+
+#prevTitle {
+  color: #fff;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  border-bottom: 1px dotted #fff;
+  cursor: pointer;
+}
+
+/*********************
+Footer section
+**********************/
+
+#footer {
+  background-color: #2E507F;
+  padding: 3% 0;
+  font-family: 'Lobster', cursive;
+}
+
+#footer .footer-title {
+  margin: 0;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+#footer .social-media {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#footer .social-media i {
+  font-size: 2.5em;
+  padding-right: 0.5em;
+  color: #8BC0FF;
+}
+
+/**********************
+Responsive Section
+***********************/
+
+@media only screen and (max-width: 1500px) {
+  .content-container {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .main-contnet, .sidebar {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-checkboxes, .bottom-checkboxes {
+    width: 100%;
+    display: block;
+  }
+}
