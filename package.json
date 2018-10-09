@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://ajcastiglione.github.io/password-generator",
   "scripts": {
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
